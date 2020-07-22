@@ -89,10 +89,10 @@ elif p2 == "Paper":
 elif p2 == "Scissors":
     p2 = 3
 
-if p1 > p2:
+if p1 > p2 or (p1==1 and p2==3):
     s1.send("You won!".encode()+p1.encode()+" will ALWAYS conquer ".encode()+p2.encode())
     s2.send("You lose!".encode()+p1.encode()+" will ALWAYS conquer ".encode()+p2.encode())
-elif p1 < p2:
+elif p1 < p2 or (p1==3 and p2==1):
     s2.send("You won!!".encode()+p2.encode()+" will ALWAYS conquer ".encode()+p1.encode())
     s1.send("You lose!!".encode()+p2.encode()+" will ALWAYS conquer ".encode()+p1.encode())
 elif p1 == p2:
